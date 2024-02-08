@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script>
+		function myFunction() {
+			var ans = document.getElementById("len").value;
+			var u1 = document.getElementById("ut1").value;
+			var u2 = document.getElementById("ut2").value;
+			document.getElementById("demo").innerHTML = "Result : " + (ans * u1) / u2;
+		}
+	</script>
+	<style>
+		h1 {
+			text-align: center;
+			font-weight: 600;
+			margin-bottom: 20px;
+			margin-top: 40px;
+		}
+
+		img {
+			display: block;
+			border-radius: 8px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#temp {
+			font-size: 20px;
+		}
+
+		#hi {
+			margin-bottom: 150px;
+		}
+
+		#calculator {
+			border: none;
+			width: 101vh;
+			height: 28pc;
+			padding: 95px;
+			margin: auto;
+			border-radius: 2vh;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url(Background.png);
+			box-shadow: 2px 7px 4vh 14px rgba(0,0,0,.5), -8px 0px 2vh 2px rgba(0,0,0,.5);
+		}
+
+		#cantainer{
+			padding: 13%;
+			height: 100vh;
+		}
+
+		button {
+			outline: 0;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			font-size: 24px;
+			margin-top: 22px;
+			padding: 8px 20px;
+			text-align: center;
+			border-radius: 15px;
+			text-decoration: none;
+			display: inline-block;
+			background-color: #ff6b46;
+		}
+
+		button:hover {
+			background-color: #ff4b2f;
+		}
+
+		#para {
+			text-align: center;
+			width: 100%;
+		}
+
+		#demo {
+			text-align: center;
+			width: 100%;
+		}
+
+		#button {
+			text-align: center;
+			width: 100%;
+		}
+	</style>
+</head>
+<body >
+	<div id="cantainer">
+		<div id="calculator">
+			<h1>Length Converter</h1>
+			<form>
+				<fieldset>
+					<p id="para">
+						<b>Enter Length:</b>
+						<input id="len" type="number" name="length" placeholder="0.0">
+						<select name="Units1" id="ut1">
+							<option value=1>Meters</option>
+							<option value=0.01>Centimeters</option>
+							<option value=39.37>Inches</option>
+							<option value=1000>Kilometers</option>
+						</select>
+						<b> Into </b>
+						<select name="Units2" id="ut2">
+							<option value=1>Meters</option>
+							<option value=0.01>Centimeters</option>
+							<option value=39.37>Inches</option>
+							<option value=1000>Kilometers</option>
+						</select>
+					</p>
+					<p id="demo"> <b id="temp">Click Calculate Button to Compute Result. </b></p>
+					<p id="button">
+						<button type="button" onclick="myFunction()"> Calculate </button>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

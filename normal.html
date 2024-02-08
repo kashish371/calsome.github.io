@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="narmal.css">
+    <script>
+function plusMinus() {
+  if (display.value.charAt(0) === "-") {
+    display.value = display.value.slice(1);
+  } else {
+    display.value = "-" + display.value;}}
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <hr>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = ' ' " class="firstrow">
+                    <input type="button" value="C" onclick="display.value = display.value.toString().slice(0,-1) " class="firstrow">
+                    <input type="button" value="&divide;" onclick="display.value += '/' " class="firstrow">
+                    <input type="button" value="(" onclick="display.value +='('"  class="color">                   
+                    <input type="button" value=")"  onclick="display.value+=')' " class="color">
+                    <input type="button" value="&deg;" onclick="display.value = display.value * (180 / Math.PI)">
+                    <input type="button" value="&ndash;" onclick="display.value += '-' " class="firstrow">
+                </div> 
+                <div>
+                    <input type="button" value="ln" onclick="display.value =Math.log(display.value)" class="color">
+                    <input type="button" value="&#xb1" onclick="plusMinus()" class="color">                    
+                    <input type="button" value="&exponentiale;" onclick="display.value =display.value*Math.E" class="color"> 
+                    <input type="button" value="7" onclick="display.value += '7' " class="color">
+                    <input type="button" value="8" onclick="display.value += '8' " class="color">
+                    <input type="button" value="9" onclick="display.value += '9' " class="color">
+                    <input type="button" value="+" onclick="display.value += '+' " class="firstrow">
+                </div>
+                <div>                     
+                    <input type="button" value="sin" onclick="display.value=Math.sin(display.value)" class="color">
+                    <input type="button" value="cos" onclick="display.value=Math.cos(display.value)" class="color">
+                    <input type="button" value="tan" onclick="display.value=Math.tan(display.value)" class="color">  
+                    <input type="button" value="4" onclick="display.value += '4' " class="color">
+                    <input type="button" value="5" onclick="display.value += '5' " class="color">
+                    <input type="button" value="6" onclick="display.value += '6' " class="color">
+                    <input type="button" value="%" onclick="display.value = eval(display.value/100) " class="firstrow" >
+                </div>
+                <div>
+                    <input type="button" value="rad" onclick="display.value=display.value*(Math.PI/180)">
+                    <input type="button" value="x&#xb2"  onclick=" display.value = eval(display.value * display.value);" class="color">                    
+                    <input type="button" value="&radic;" onclick="display.value= Math.sqrt(display.value)" class="color"> 
+                    <input type="button" value="1" onclick="display.value += '1' " class="color">
+                    <input type="button" value="2" onclick="display.value += '2' " class="color">
+                    <input type="button" value="3" onclick="display.value += '3' " class="color">
+                    <input type="button" value="X" onclick="display.value += '*' " class="firstrow">
+                </div>
+                <div>
+                    <input type="button" value="log" onclick="display.value = Math.log10(display.value) " class="color">                       
+                    <input type="button" value="&pi;" onclick="display.value=(display.value*Math.PI) "  class="color"> 
+                    <input type="button" value="00" onclick="display.value += '00' " class="color">
+                    <input type="button" value="0" onclick="display.value += '0' " class="color"> 
+                    <input type="button" value="." onclick="display.value += '.' " class="color"> 
+                    <input type="button" value="exp"  onclick="display.value+='E',Math.exp(display.exp)" class="color"> 
+                    <input type="button" value="=" onclick="display.value = eval(display.value) " class="firstrow" >
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
